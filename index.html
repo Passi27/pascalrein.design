@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pascal Rein - Videoproduktion, Design & Fotografie aus Pforzheim. Ich mache Ideen greifbar.">
-    <meta name="keywords" content="Videoproduktion, Videograf, Designer, Fotografie, Industrial Design, 3D-Druck, Prototyping, Pforzheim">
+    <meta name="description" content="Pascal Rein - Videoproduktion & Design aus Pforzheim. Professionelle Videos, Produktdesign und 3D-Visualisierung. Ich mache Ideen greifbar.">
+    <meta name="keywords" content="Videoproduktion Pforzheim, Videograf, Industrial Designer, 3D-Druck, Prototyping, CAD">
     <title>Pascal Rein - Videoproduktion & Design</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
@@ -26,19 +26,31 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.95);
             backdrop-filter: blur(10px);
             padding: 1.5rem 5%;
             z-index: 1000;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
+        nav .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
         nav ul {
             list-style: none;
             display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
+            gap: 2.5rem;
         }
 
         nav a {
@@ -46,8 +58,7 @@
             color: #ffffff;
             font-weight: 400;
             font-size: 0.9rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
+            letter-spacing: 0.05em;
             transition: color 0.3s;
         }
 
@@ -55,15 +66,29 @@
             color: #3d9970;
         }
 
+        .cta-nav {
+            padding: 0.6rem 1.5rem;
+            background: transparent;
+            border: 1px solid #3d9970;
+            border-radius: 30px;
+            color: #3d9970 !important;
+            transition: all 0.3s;
+        }
+
+        .cta-nav:hover {
+            background: #3d9970;
+            color: #000 !important;
+        }
+
         .hero {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
             background: linear-gradient(135deg, #1e5f4a 0%, #2d4a5e 50%, #1a3d5c 100%);
-            padding: 0 5%;
+            padding: 8rem 5% 4rem;
             position: relative;
             overflow: hidden;
         }
@@ -76,89 +101,85 @@
             right: 0;
             bottom: 0;
             background: 
-                linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.03) 49%, rgba(255,255,255,0.03) 51%, transparent 52%),
-                linear-gradient(-45deg, transparent 48%, rgba(255,255,255,0.03) 49%, rgba(255,255,255,0.03) 51%, transparent 52%);
+                linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.02) 49%, rgba(255,255,255,0.02) 51%, transparent 52%),
+                linear-gradient(-45deg, transparent 48%, rgba(255,255,255,0.02) 49%, rgba(255,255,255,0.02) 51%, transparent 52%);
             background-size: 100px 100px;
             opacity: 0.5;
         }
 
         .hero-content {
             z-index: 1;
+            max-width: 900px;
         }
 
         .hero-tagline {
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: 300;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.2em;
             text-transform: uppercase;
             margin-bottom: 2rem;
-            opacity: 0.9;
+            opacity: 0.8;
             animation: fadeInUp 1s ease;
         }
 
-        .hero-logo {
-            font-size: 8rem;
+        .hero h1 {
+            font-size: 5rem;
             font-weight: 700;
             letter-spacing: 0.05em;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             animation: fadeInUp 1s ease 0.2s both;
-            line-height: 1;
+            line-height: 1.1;
         }
 
-        .hero h1 {
-            font-size: 3rem;
+        .hero-subtitle {
+            font-size: 1.8rem;
             font-weight: 300;
-            letter-spacing: 0.3em;
-            text-transform: uppercase;
-            margin-bottom: 2rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 3rem;
+            opacity: 0.9;
             animation: fadeInUp 1s ease 0.4s both;
         }
 
-        .hero-services {
-            font-size: 1rem;
-            font-weight: 300;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            opacity: 0.8;
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
             animation: fadeInUp 1s ease 0.6s both;
         }
 
-        .hero-services span {
-            margin: 0 1rem;
+        .btn {
+            padding: 1rem 2.5rem;
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+            display: inline-block;
+            font-weight: 500;
         }
 
-        .cta-button {
-            margin-top: 3rem;
-            padding: 1rem 3rem;
+        .btn-primary {
+            background: #3d9970;
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            background: #4db88a;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(61, 153, 112, 0.3);
+        }
+
+        .btn-secondary {
             background: transparent;
             color: white;
             border: 2px solid white;
-            border-radius: 50px;
-            font-size: 1rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s;
-            animation: fadeInUp 1s ease 0.8s both;
         }
 
-        .cta-button:hover {
+        .btn-secondary:hover {
             background: white;
             color: #1e5f4a;
-        }
-
-        .scroll-indicator {
-            position: absolute;
-            bottom: 3rem;
-            animation: bounce 2s infinite;
-        }
-
-        .scroll-indicator svg {
-            width: 40px;
-            height: 40px;
-            fill: white;
-            opacity: 0.6;
         }
 
         @keyframes fadeInUp {
@@ -172,101 +193,183 @@
             }
         }
 
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-10px);
-            }
-            60% {
-                transform: translateY(-5px);
-            }
-        }
-
         section {
-            padding: 8rem 5%;
+            padding: 6rem 5%;
             max-width: 1400px;
             margin: 0 auto;
         }
 
         .section-dark {
             background: #0a0a0a;
+            padding: 6rem 0;
+        }
+
+        .section-dark > div {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 5%;
         }
 
         h2 {
             font-size: 3rem;
-            margin-bottom: 4rem;
+            margin-bottom: 1rem;
             text-align: center;
-            font-weight: 300;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
+            font-weight: 400;
+            letter-spacing: 0.1em;
         }
 
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
+        .section-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
             font-size: 1.1rem;
-            line-height: 1.8;
+            opacity: 0.8;
             font-weight: 300;
         }
 
-        .about-image {
-            width: 100%;
-            height: 500px;
-            background: #1a1a1a;
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .video-card {
+            background: #0a0a0a;
             border-radius: 10px;
             overflow: hidden;
-        }
-
-        .about-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            padding: 3rem 2rem;
-            background: linear-gradient(135deg, rgba(30, 95, 74, 0.2) 0%, rgba(26, 61, 92, 0.2) 100%);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
             transition: all 0.3s;
         }
 
-        .service-card:hover {
-            transform: translateY(-10px);
+        .video-card:hover {
+            transform: translateY(-5px);
             border-color: rgba(61, 153, 112, 0.5);
-            box-shadow: 0 20px 40px rgba(61, 153, 112, 0.1);
+            box-shadow: 0 20px 40px rgba(61, 153, 112, 0.15);
         }
 
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-info {
+            padding: 1.5rem;
+        }
+
+        .video-info h3 {
+            font-size: 1.2rem;
             font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+
+        .video-info p {
+            font-size: 0.95rem;
+            opacity: 0.7;
+            font-weight: 300;
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .highlight-card {
+            background: linear-gradient(135deg, rgba(30, 95, 74, 0.15) 0%, rgba(26, 61, 92, 0.15) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.4s;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(61, 153, 112, 0.6);
+            box-shadow: 0 25px 50px rgba(61, 153, 112, 0.2);
+        }
+
+        .highlight-image {
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .highlight-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+
+        .highlight-card:hover .highlight-image img {
+            transform: scale(1.05);
+        }
+
+        .highlight-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(61, 153, 112, 0.9);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
             letter-spacing: 0.05em;
         }
 
-        .service-card p {
+        .highlight-info {
+            padding: 2rem;
+        }
+
+        .highlight-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .highlight-awards {
+            color: #3d9970;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .highlight-info p {
             font-weight: 300;
-            line-height: 1.8;
+            line-height: 1.7;
             opacity: 0.8;
+        }
+
+        .projects-more {
+            margin-top: 4rem;
+        }
+
+        .projects-more h3 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-weight: 400;
+            opacity: 0.9;
         }
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
@@ -279,21 +382,13 @@
         }
 
         .project-card:hover {
-            transform: translateY(-10px);
-            border-color: rgba(61, 153, 112, 0.5);
+            transform: translateY(-5px);
+            border-color: rgba(61, 153, 112, 0.4);
         }
 
         .project-image {
             width: 100%;
-            height: 300px;
-            background: linear-gradient(135deg, #1e5f4a 0%, #1a3d5c 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255, 255, 255, 0.3);
-            font-size: 0.9rem;
-            letter-spacing: 0.1em;
-            position: relative;
+            height: 250px;
             overflow: hidden;
         }
 
@@ -301,177 +396,136 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.3s;
         }
 
-        .project-image iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
         }
 
         .project-info {
-            padding: 2rem;
+            padding: 1.5rem;
         }
 
-        .project-info h3 {
+        .project-info h4 {
             margin-bottom: 0.5rem;
             font-weight: 400;
-            letter-spacing: 0.05em;
+            font-size: 1.2rem;
         }
 
         .project-info p {
             font-weight: 300;
             opacity: 0.7;
-            line-height: 1.6;
+            font-size: 0.95rem;
         }
 
-        .skills-section {
-            background: linear-gradient(135deg, #1e5f4a 0%, #2d4a5e 50%, #1a3d5c 100%);
-            padding: 6rem 5%;
-        }
-
-        .skills-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .skills-grid {
+        .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-        }
-
-        .skill-category h3 {
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-            font-weight: 400;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            opacity: 0.9;
-        }
-
-        .skill-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-        }
-
-        .skill-tag {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 0.6rem 1.2rem;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            font-weight: 300;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            letter-spacing: 0.05em;
-        }
-
-        .awards-section {
-            background: #0a0a0a;
-            padding: 6rem 5%;
-        }
-
-        .awards-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .awards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
 
-        .award-card {
+        .service-card {
+            padding: 2.5rem;
             background: linear-gradient(135deg, rgba(30, 95, 74, 0.1) 0%, rgba(26, 61, 92, 0.1) 100%);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 2.5rem;
             border-radius: 10px;
             transition: all 0.3s;
-        }
-
-        .award-card:hover {
-            border-color: rgba(61, 153, 112, 0.5);
-            transform: translateY(-5px);
-        }
-
-        .award-card h3 {
-            margin-bottom: 0.5rem;
-            font-size: 1.3rem;
-            font-weight: 400;
-            letter-spacing: 0.05em;
-        }
-
-        .award-year {
-            opacity: 0.6;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            font-weight: 300;
-            letter-spacing: 0.05em;
-        }
-
-        .award-card p {
-            font-weight: 300;
-            line-height: 1.6;
-            opacity: 0.8;
-        }
-
-        .cv-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .cv-item {
-            margin-bottom: 3rem;
-            padding-left: 2rem;
-            border-left: 2px solid rgba(61, 153, 112, 0.5);
-        }
-
-        .cv-item h3 {
-            font-weight: 400;
-            margin-bottom: 0.5rem;
-            letter-spacing: 0.05em;
-        }
-
-        .cv-item .date {
-            color: #3d9970;
-            font-weight: 300;
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-            letter-spacing: 0.05em;
-        }
-
-        .cv-item p {
-            font-weight: 300;
-            line-height: 1.8;
-            opacity: 0.8;
-        }
-
-        .contact-content {
-            max-width: 700px;
-            margin: 0 auto;
             text-align: center;
         }
 
-        .contact-content > p {
-            font-size: 1.2rem;
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(61, 153, 112, 0.5);
+            background: linear-gradient(135deg, rgba(30, 95, 74, 0.15) 0%, rgba(26, 61, 92, 0.15) 100%);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .service-card p {
             font-weight: 300;
-            margin-bottom: 3rem;
+            line-height: 1.7;
             opacity: 0.8;
         }
 
-        .contact-info {
+        .awards-banner {
+            background: linear-gradient(135deg, #1e5f4a 0%, #2d4a5e 50%, #1a3d5c 100%);
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .awards-banner h2 {
+            margin-bottom: 2rem;
+        }
+
+        .awards-list {
             display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .award-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 2rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            min-width: 250px;
+        }
+
+        .award-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            font-weight: 500;
+        }
+
+        .award-item p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            font-weight: 300;
+        }
+
+        .contact-section {
+            text-align: center;
+            padding: 6rem 5%;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 2rem;
+        }
+
+        .contact-section p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            opacity: 0.8;
+            font-weight: 300;
+        }
+
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
         }
 
         .contact-item {
             font-size: 1.1rem;
             font-weight: 300;
-            letter-spacing: 0.05em;
         }
 
         .contact-item a {
@@ -487,379 +541,296 @@
         footer {
             background: #000000;
             text-align: center;
-            padding: 3rem;
+            padding: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             font-weight: 300;
-            letter-spacing: 0.1em;
             font-size: 0.9rem;
             opacity: 0.6;
         }
 
         @media (max-width: 768px) {
-            .hero-logo {
-                font-size: 4rem;
+            nav ul {
+                display: none;
             }
 
             .hero h1 {
-                font-size: 1.8rem;
+                font-size: 3rem;
             }
 
-            .hero-services {
-                font-size: 0.85rem;
-            }
-
-            .hero-services span {
-                display: block;
-                margin: 0.5rem 0;
+            .hero-subtitle {
+                font-size: 1.3rem;
             }
 
             h2 {
                 font-size: 2rem;
             }
 
-            .about-content {
+            .video-grid,
+            .highlights-grid,
+            .projects-grid {
                 grid-template-columns: 1fr;
             }
 
-            nav ul {
-                gap: 1rem;
-                font-size: 0.75rem;
+            .btn {
+                padding: 0.8rem 2rem;
+                font-size: 0.9rem;
             }
 
             section {
                 padding: 4rem 5%;
-            }
-
-            .projects-grid,
-            .services-grid {
-                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">Über mich</a></li>
-            <li><a href="#services">Leistungen</a></li>
-            <li><a href="#projects">Portfolio</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#awards">Awards</a></li>
-            <li><a href="#cv">Werdegang</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-        </ul>
+        <div class="nav-content">
+            <div class="logo">PR</div>
+            <ul>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="#contact" class="cta-nav">Kontakt</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <section id="home" class="hero">
+    <section class="hero">
         <div class="hero-content">
             <div class="hero-tagline">Ich mache Ideen greifbar.</div>
-            <div class="hero-logo">PR</div>
-            <h1>PASCALREIN.DESIGN</h1>
-            <div class="hero-services">
-                DESIGN<span>·</span>PROTOTYPING<span>·</span>3D-DRUCK<span>·</span>VIDEOPRODUKTION<span>·</span>FOTOGRAFIE
-            </div>
-            <a href="#contact" class="cta-button">Kontakt</a>
-        </div>
-        <div class="scroll-indicator">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 16l-6-6h12z"/>
-            </svg>
-        </div>
-    </section>
-
-    <section id="about" class="section-dark">
-        <h2>Pascal Rein</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Ich bin freiberuflicher Industrial Designer mit Sitz in Pforzheim und einem klaren Fokus: Ideen greifbar, sichtbar und erlebbar machen.</p>
-                <p>Mein Hintergrund im Industrial Design, kombiniert mit praktischer Erfahrung in 3D-Druck, CAD-Konstruktion, Videoproduktion und Fotografie, ermöglicht es mir, Projekte ganzheitlich zu realisieren – von der ersten Skizze bis zum fertigen Prototyp oder Content-Paket.</p>
-                <p>Was mich antreibt, ist die Verbindung von Technik und Emotion. Ob physisches Produkt oder visuelles Storytelling – ich arbeite interdisziplinär, präzise und mit einem hohen Anspruch an Ästhetik und Funktion.</p>
-            </div>
-            <div class="about-image">
-                <img src="images/portrait.jpg" alt="Pascal Rein" onerror="this.parentElement.innerHTML='[Dein Portrait hier einfügen]'">
+            <h1>Pascal Rein</h1>
+            <div class="hero-subtitle">Videoproduktion · Design · Prototyping</div>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">Projekt anfragen</a>
+                <a href="#portfolio" class="btn btn-secondary">Portfolio ansehen</a>
             </div>
         </div>
     </section>
 
-    <section id="services">
-        <h2>Meine Leistungen</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>📹 Videoproduktion</h3>
-                <p>Professionelle Videoproduktion von der Planung bis zum finalen Schnitt. Imagefilme, Produktvideos, Social Media Content und Event-Dokumentationen mit hochwertiger visueller Sprache.</p>
-            </div>
-            <div class="service-card">
-                <h3>🎨 Design & CAD</h3>
-                <p>Industrial Design, Produktdesign und visuelle Konzepte. CAD-Modellierung mit SolidWorks, Rhino und Fusion360. Von der ersten Skizze bis zur technischen Zeichnung.</p>
-            </div>
-            <div class="service-card">
-                <h3>📸 Fotografie</h3>
-                <p>Professionelle Produktfotografie, Event-Dokumentation und Portrait-Shooting. Hochwertige Bilder mit Fokus auf Ästhetik und visuelle Wirkung für Print und Digital.</p>
-            </div>
-            <div class="service-card">
-                <h3>🔧 Prototyping & 3D-Druck</h3>
-                <p>Vom digitalen Modell zum physischen Prototyp. 3D-Druck und Prototyping für Produktentwicklung, Design-Validierung und Präsentationen.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section-dark">
-        <h2>Portfolio</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">
+    <section id="portfolio">
+        <h2>Videoproduktion</h2>
+        <p class="section-intro">Professionelle Videos von der Konzeption bis zur finalen Post-Production. Imagefilme, Content Creation und visuelle Geschichten, die bewegen.</p>
+        
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-wrapper">
                     <iframe src="https://www.youtube.com/embed/6S-zKIrlBR0" allowfullscreen></iframe>
                 </div>
-                <div class="project-info">
-                    <h3>Video Projekt 1</h3>
-                    <p>Professionelle Videoproduktion - Konzeption, Kameraarbeit und Schnitt für hochwertigen Content.</p>
+                <div class="video-info">
+                    <h3>Video Projekt</h3>
+                    <p>Kreative Videoproduktion mit Fokus auf visuelles Storytelling</p>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-image">
+            <div class="video-card">
+                <div class="video-wrapper">
                     <iframe src="https://www.youtube.com/embed/carQzk3b614" allowfullscreen></iframe>
                 </div>
-                <div class="project-info">
-                    <h3>Video Projekt 2</h3>
-                    <p>Kreative Videoproduktion mit Fokus auf visuelles Storytelling und technischer Umsetzung.</p>
+                <div class="video-info">
+                    <h3>Video Projekt</h3>
+                    <p>Hochwertige Produktion von Konzept bis Schnitt</p>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-image">
+            <div class="video-card">
+                <div class="video-wrapper">
                     <iframe src="https://www.youtube.com/embed/E9RTApsvUS8" allowfullscreen></iframe>
                 </div>
-                <div class="project-info">
-                    <h3>Video Projekt 3</h3>
-                    <p>Hochwertige Videoproduktion von der Planung bis zur finalen Post-Production.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/ensobuds.jpg" alt="ENSO Buds" onerror="this.parentElement.innerHTML='[ENSO BUDS]'">
-                </div>
-                <div class="project-info">
-                    <h3>ENSO Buds</h3>
-                    <p>In-Ear Kopfhörer für zeitgemäße Meditation. Bachelorarbeit ausgezeichnet mit dem Rolf-Scheuermann-Förderpreis und Red Dot Concept Award Finalist.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/pandialogo.jpg" alt="Pandia Maddox" onerror="this.parentElement.innerHTML='[PANDIA MADDOX]'">
-                </div>
-                <div class="project-info">
-                    <h3>Pandia Maddox</h3>
-                    <p>Die Dialupe der Moderne – Red Dot Concept Award Finalist 2023. Innovation in der Fotografie-Technologie.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/aqua4.jpg" alt="Aqua Uhr" onerror="this.parentElement.innerHTML='[AQUA UHR]'">
-                </div>
-                <div class="project-info">
-                    <h3>Aqua Watch Design</h3>
-                    <p>Uhren-Design mit Fokus auf moderne Ästhetik und technische Präzision. CAD-Modellierung und Rendering.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/cad9.jpg" alt="CAD Rendering" onerror="this.parentElement.innerHTML='[CAD PROJEKT]'">
-                </div>
-                <div class="project-info">
-                    <h3>CAD Rendering</h3>
-                    <p>Hochwertige CAD-Visualisierung und technische Produktdarstellung mit fotorealistischen Renderings.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/thanatos4.jpg" alt="Thanatos Projekt" onerror="this.parentElement.innerHTML='[THANATOS]'">
-                </div>
-                <div class="project-info">
-                    <h3>Thanatos</h3>
-                    <p>Produktdesign mit Fokus auf Form und Funktion. Vom Konzept über CAD-Modellierung bis zum physischen Prototyp.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/3dprint.jpg" alt="3D Druck Projekt" onerror="this.parentElement.innerHTML='[3D DRUCK]'">
-                </div>
-                <div class="project-info">
-                    <h3>3D-Druck & Prototyping</h3>
-                    <p>Von der digitalen CAD-Datei zum physischen Prototyp. Rapid Prototyping für Produktentwicklung und Design-Validierung.</p>
+                <div class="video-info">
+                    <h3>Video Projekt</h3>
+                    <p>Professionelle Kameraarbeit und Post-Production</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="skills-section" id="skills">
-        <div class="skills-container">
-            <h2>Skills & Tools</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Videoproduktion</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Adobe Premiere Pro</span>
-                        <span class="skill-tag">Videografie</span>
-                        <span class="skill-tag">Schnitt & Montage</span>
-                        <span class="skill-tag">Farbkorrektur</span>
-                        <span class="skill-tag">Content Creation</span>
+    <div class="section-dark">
+        <div>
+            <h2>Design Highlights</h2>
+            <p class="section-intro">Preisgekrönte Produktdesigns von der ersten Skizze bis zum fertigen Prototyp.</p>
+            
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-image">
+                        <img src="images/vitra1.jpg" alt="Vitra Projekt" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22350%22%3E%3Crect fill=%22%231a3d5c%22 width=%22400%22 height=%22350%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 fill=%22%23fff%22 opacity=%220.3%22 font-size=%2220%22%3EVITRA%3C/text%3E%3C/svg%3E'">
+                        <div class="highlight-badge">Featured</div>
+                    </div>
+                    <div class="highlight-info">
+                        <h3>Vitra Design</h3>
+                        <div class="highlight-awards">Design Excellence</div>
+                        <p>Innovative Möbel- und Produktgestaltung mit Fokus auf zeitloses Design und hochwertige Materialien.</p>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>CAD & 3D</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">SolidWorks</span>
-                        <span class="skill-tag">Blender</span>
-                        <span class="skill-tag">Rhino</span>
-                        <span class="skill-tag">KeyShot</span>
-                        <span class="skill-tag">Fusion360</span>
+
+                <div class="highlight-card">
+                    <div class="highlight-image">
+                        <img src="images/ensobuds.jpg" alt="ENSO Buds" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22350%22%3E%3Crect fill=%22%231a3d5c%22 width=%22400%22 height=%22350%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 fill=%22%23fff%22 opacity=%220.3%22 font-size=%2220%22%3EENSO BUDS%3C/text%3E%3C/svg%3E'">
+                        <div class="highlight-badge">Award Winner</div>
+                    </div>
+                    <div class="highlight-info">
+                        <h3>ENSO Buds</h3>
+                        <div class="highlight-awards">🏆 Rolf-Scheuermann-Förderpreis · Red Dot Finalist</div>
+                        <p>In-Ear Kopfhörer für zeitgemäße Meditation im Alltag. Bachelorarbeit mit Auszeichnung für herausragenden Innovationsgrad und Praxisbezug.</p>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Kreativ-Software</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Adobe Photoshop</span>
-                        <span class="skill-tag">Adobe Illustrator</span>
-                        <span class="skill-tag">Procreate</span>
-                        <span class="skill-tag">SketchbookPro</span>
+
+                <div class="highlight-card">
+                    <div class="highlight-image">
+                        <img src="images/pandialogo.jpg" alt="Pandia Maddox" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22350%22%3E%3Crect fill=%22%231a3d5c%22 width=%22400%22 height=%22350%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 fill=%22%23fff%22 opacity=%220.3%22 font-size=%2220%22%3EPANDIA MADDOX%3C/text%3E%3C/svg%3E'">
+                        <div class="highlight-badge">Red Dot Finalist</div>
+                    </div>
+                    <div class="highlight-info">
+                        <h3>Pandia Maddox</h3>
+                        <div class="highlight-awards">🏆 Red Dot Concept Award Finalist 2023</div>
+                        <p>Die Dialupe der Moderne. Innovation in der Fotografie-Technologie mit Verbindung von traditioneller Fotografie und digitaler Bearbeitung.</p>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Fertigung & Prototyping</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">3D-Druck</span>
-                        <span class="skill-tag">Prototyping</span>
-                        <span class="skill-tag">Technisches Verständnis</span>
-                        <span class="skill-tag">Modellbau</span>
+            </div>
+
+            <div class="projects-more">
+                <h3>Weitere Projekte</h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/aqua4.jpg" alt="Aqua Watch" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22250%22%3E%3Crect fill=%22%231a3d5c%22 width=%22400%22 height=%22250%22/%3E%3C/svg%3E'">
+                        </div>
+                        <div class="project-info">
+                            <h4>Aqua Watch Design</h4>
+                            <p>Moderne Uhren-Gestaltung mit Fokus auf technische Präzision und Ästhetik</p>
+                        </div>
                     </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Soft Skills</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Kreativität</span>
-                        <span class="skill-tag">Kommunikation</span>
-                        <span class="skill-tag">Zeitmanagement</span>
-                        <span class="skill-tag">Teamfähigkeit</span>
-                        <span class="skill-tag">Effizienz</span>
-                        <span class="skill-tag">Lernbereitschaft</span>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/cad9.jpg" alt="CAD Rendering" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22250%22%3E%3Crect fill=%22%231a3d5c%22 width=%22400%22 height=%22250%22/%3E%3C/svg%3E'">
+                        </div>
+                        <div class="project-info">
+                            <h4>CAD Visualisierung</h4>
+                            <p>Fotorealistische Renderings für Produktpräsentationen</p>
+                        </div>
                     </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Sprachen</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Deutsch (Muttersprache)</span>
-                        <span class="skill-tag">Englisch (Fortgeschritten)</span>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/thanatos4.jpg" alt="Thanatos" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22250%22%3E%3Crect fill=%22%231a3d5c%22 width=%22400%22 height=%22250%22/%3E%3C/svg%3E'">
+                        </div>
+                        <div class="project-info">
+                            <h4>Thanatos</h4>
+                            <p>Produktdesign vom Konzept bis zum Prototyp</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/3dprint.jpg" alt="3D Druck" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22250%22%3E%3Crect fill=%22%231a3d5c%22 width=%22400%22 height=%22250%22/%3E%3C/svg%3E'">
+                        </div>
+                        <div class="project-info">
+                            <h4>3D-Druck & Prototyping</h4>
+                            <p>Rapid Prototyping für Produktentwicklung</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="awards-section" id="awards">
-        <div class="awards-container">
-            <h2>Awards</h2>
-            <div class="awards-grid">
-                <div class="award-card">
-                    <h3>German Design Award</h3>
-                    <p class="award-year">2026</p>
-                    <p>Nominee - Newcomer of the Year</p>
-                </div>
-                <div class="award-card">
-                    <h3>Rolf-Scheuermann-Förderpreis</h3>
-                    <p class="award-year">2023</p>
-                    <p>Gewinner für ENSO Buds - Auszeichnung für herausragende Abschlussarbeiten mit besonderem Innovationsgrad und Praxisbezug</p>
-                </div>
-                <div class="award-card">
-                    <h3>Red Dot Concept Award</h3>
-                    <p class="award-year">2022 & 2023</p>
-                    <p>Finalist für ENSO Buds & Pandia MADDOX</p>
-                </div>
-                <div class="award-card">
-                    <h3>Packaging Design Award</h3>
-                    <p class="award-year">2018</p>
-                    <p>1. Platz beim Gestaltungswettbewerb für das Verpackungsdesign der Schillerschokolade Marbach</p>
-                </div>
+    <section id="services">
+        <h2>Was ich anbiete</h2>
+        <p class="section-intro">Von der ersten Idee bis zur finalen Umsetzung – professionelle Dienstleistungen für dein Projekt.</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🎬</div>
+                <h3>Videoproduktion</h3>
+                <p>Imagefilme, Produktvideos, Social Media Content. Von Konzeption über Dreh bis Schnitt und Farbkorrektur.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h3>Produktdesign</h3>
+                <p>Industrial Design und Produktentwicklung. Von der Skizze über CAD-Modellierung bis zur technischen Zeichnung.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📸</div>
+                <h3>Fotografie</h3>
+                <p>Professionelle Produktfotografie und Event-Dokumentation mit Fokus auf visuelle Wirkung.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>Prototyping</h3>
+                <p>3D-Druck und physische Prototypen für Produktentwicklung und Design-Validierung.</p>
             </div>
         </div>
+    </section>
+
+    <div class="awards-banner" id="awards">
+        <h2>Auszeichnungen</h2>
+        <div class="awards-list">
+            <div class="award-item">
+                <h4>🏆 German Design Award</h4>
+                <p>Nominee 2
+<function_calls>
+<invoke name="artifacts">
+<parameter name="command">update</parameter>
+<parameter name="id">portfolio_template</parameter>
+<parameter name="old_str">                <h4>🏆 German Design Award</h4>
+<p>Nominee 2</parameter>
+<parameter name="new_str">                <h4>🏆 German Design Award</h4>
+<p>Nominee 2026 - Newcomer of the Year</p>
+</div>
+<div class="award-item">
+<h4>🏆 Rolf-Scheuermann-Förderpreis</h4>
+<p>Gewinner 2023</p>
+</div>
+<div class="award-item">
+<h4>🏆 Red Dot Concept Award</h4>
+<p>Finalist 2022 & 2023</p>
+</div>
+<div class="award-item">
+<h4>🏆 Packaging Design Award</h4>
+<p>1. Platz 2018</p>
+</div>
+</div>
+</div>
+<section id="contact" class="contact-section">
+    <h2>Lass uns dein Projekt starten</h2>
+    <p>Bereit für professionelle Videoproduktion oder innovative Produktgestaltung? Kontaktiere mich für ein unverbindliches Erstgespräch.</p>
+    
+    <div class="hero-cta">
+        <a href="mailto:pascalrein@gmx.de" class="btn btn-primary">📧 Email schreiben</a>
+        <a href="tel:+4915778286921" class="btn btn-secondary">📱 Anrufen</a>
     </div>
 
-    <section id="cv">
-        <h2>Werdegang</h2>
-        <div class="cv-content">
-            <div class="cv-item">
-                <h3>Freelance Videoproduktion & Design</h3>
-                <div class="date">seit 2023 - pascalrein.design</div>
-                <p>Selbstständige Tätigkeit in den Bereichen Videoproduktion, Design, Fotografie und Prototyping. Ganzheitliche Projektbegleitung von der Konzeption bis zur finalen Umsetzung.</p>
-            </div>
-            <div class="cv-item">
-                <h3>Lehrbeauftragter Videoproduktion</h3>
-                <div class="date">2022-2023 - Designfactory Pforzheim</div>
-                <p>Vermittlung von Videoproduktions-Know-how und praktischer Anwendung. Begleitung von Projekten von der Idee bis zur fertigen Inszenierung – inklusive Konzeption, Kameraarbeit, Schnitt und Content-Erstellung für Social Media.</p>
-            </div>
-            <div class="cv-item">
-                <h3>Praxissemester Retail & Interior Design</h3>
-                <div class="date">2021-2022 - Blocher Partners Stuttgart</div>
-                <p>Praktische Erfahrung im Bereich Retail Design und Interior Design bei einem der führenden Architekturbüros. Arbeit an Designstudios von Produktentwicklung und Modellbau bis hin zu Innenarchitektur und Möbelentwurf.</p>
-            </div>
-            <div class="cv-item">
-                <h3>Bachelor of Arts - Industrial Design</h3>
-                <div class="date">2018-2022 - Hochschule Pforzheim</div>
-                <p>Studium an der renommierten Hochschule Pforzheim mit Abschluss B.A. (2022). Bachelorarbeit über zeitgemäße Meditation mit Entwicklung von ENSO Buds In-Ear Kopfhörern. Umfassende Praxiserfahrung in verschiedenen Designstudios.</p>
-            </div>
-            <div class="cv-item">
-                <h3>Praktikum</h3>
-                <div class="date">2017-2018 - MAHLE & AMF Theaterbauten</div>
-                <p>Erste praktische Erfahrungen im Design- und Technikbereich. Einblick in Produktentwicklung und technische Konstruktion.</p>
-            </div>
-            <div class="cv-item">
-                <h3>Abitur mit Fachrichtung Kunst</h3>
-                <div class="date">2017 - Friedrich-Schiller-Gymnasium Marbach</div>
-                <p>Schulabschluss mit künstlerischem Schwerpunkt, der die Grundlage für die spätere Design-Karriere legte.</p>
-            </div>
+    <div class="contact-methods">
+        <div class="contact-item">
+            📧 <a href="mailto:pascalrein@gmx.de">pascalrein@gmx.de</a>
         </div>
-    </section>
-
-    <section id="contact" class="section-dark">
-        <h2>Kontakt</h2>
-        <div class="contact-content">
-            <p>Ob Skizze oder Rendering, Produkt oder Film – ich liebe es, Visionen Form zu geben.</p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    📧 <a href="mailto:pascalrein@gmx.de">pascalrein@gmx.de</a>
-                </div>
-                <div class="contact-item">
-                    📱 <a href="tel:+4915778286921">+49 1577 8286921</a>
-                </div>
-                <div class="contact-item">
-                    💼 <a href="https://linkedin.com/in/pascalrein" target="_blank">LinkedIn</a>
-                </div>
-                <div class="contact-item">
-                    🌐 <a href="https://www.pascalrein.design" target="_blank">pascalrein.design</a>
-                </div>
-                <div class="contact-item">
-                    📍 Liebeneckstr. 33, 75175 Pforzheim
-                </div>
-            </div>
+        <div class="contact-item">
+            📱 <a href="tel:+4915778286921">+49 1577 8286921</a>
         </div>
-    </section>
+        <div class="contact-item">
+            💼 <a href="https://linkedin.com/in/pascalrein" target="_blank">LinkedIn</a>
+        </div>
+        <div class="contact-item">
+            📍 Pforzheim, Deutschland
+        </div>
+    </div>
+</section>
 
-    <footer>
-        <p>&copy; 2025 Pascal Rein. Alle Rechte vorbehalten.</p>
-    </footer>
+<footer>
+    <p>&copy; 2025 Pascal Rein · pascalrein.design · Alle Rechte vorbehalten</p>
+</footer>
 
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         });
-    </script>
+    });
+</script>
 </body>
-</html>
+</html></parameter>
