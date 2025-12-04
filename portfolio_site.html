@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pascal Rein – Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f6f8;
+      color: #1a1a1a;
+    }
+    header {
+      width: 100%;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: transparent;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #1a1a1a;
+      font-size: 16px;
+    }
+    .hero {
+      margin-top: 140px;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    .hero h1 {
+      font-size: 32px;
+      font-weight: 600;
+    }
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto;
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 40px;
+      background: #0a1226;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .section {
+      padding: 120px 60px;
+    }
+    .section h2 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+    .project {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      padding-bottom: 20px;
+    }
+    .project img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .project h3 {
+      margin: 20px;
+      font-size: 20px;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    footer {
+      padding: 60px;
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="font-weight: bold; font-size: 20px;">Pascal Rein</div>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div style="opacity:0.7; font-size: 14px;">Designer & Creative Director</div>
+    <h1>Crafting meaningful digital experiences through design</h1>
+    <p>I'm a designer specializing in branding, web design, and user interfaces. With a passion for creating beautiful and functional designs that tell stories.</p>
+    <a href="#work" class="btn">View My Work ↓</a>
+  </section>
+
+  <section id="work" class="section">
+    <h2>Selected Work</h2>
+    <p>A collection of projects that showcase my approach to design.</p>
+
+    <div class="grid">
+      <div class="project">
+        <img src="images/enso.jpg" alt="ENSO" />
+        <h3>ENSO</h3>
+      </div>
+      <div class="project">
+        <img src="images/thanatos.jpg" alt="THANATOS" />
+        <h3>THANATOS</h3>
+      </div>
+      <div class="project">
+        <img src="images/ecommerce.jpg" alt="E-Commerce" />
+        <h3>E‑Commerce Platform</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="about">
+      <div>
+        <h2>About Me</h2>
+        <p>Hi! I'm Pascal Rein, a passionate designer with over 8 years of experience in creating digital products that make a difference. My journey started with a fascination for how visual elements communicate powerful messages.</p>
+        <p>I believe in the perfect balance between aesthetics and functionality – every project is a chance to create meaningful experiences people love.</p>
+      </div>
+      <img src="images/portrait.jpg" alt="Portrait" style="width:100%; border-radius:20px;" />
+    </div>
+  </section>
+
+  <section id="contact" class="section" style="text-align:center;">
+    <h2>Contact</h2>
+    <p>You can reach me at:<br><strong>hello@pascalrein.design</strong></p>
+  </section>
+
+  <footer>
+    © 2025 Pascal Rein — All rights reserved.
+  </footer>
+</body>
+</html>
