@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="images/logo1.png" />
+  <title>Pascal Rein – Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header - Minimal */
+    header {
+      padding: 40px 60px;
+      background: #fff;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 28px;
+      color: #1f6131;
+    }
+
+    /* Hero Section - Clean */
+    .hero {
+      padding: 100px 60px 80px;
+      background: #fff;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      font-weight: 300;
+      color: #333;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto 50px;
+    }
+
+    .hero-links {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .hero-links a {
+      color: #666;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .hero-links a:hover {
+      color: #1f6131;
+    }
+
+    /* Section Headers */
+    .section {
+      padding: 80px 60px;
+      background: #fff;
+      margin-bottom: 2px;
+    }
+
+    .section-header {
+      margin-bottom: 40px;
+    }
+
+    .section-header h2 {
+      font-size: 32px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .section-header p {
+      font-size: 16px;
+      color: #666;
+      max-width: 700px;
+    }
+
+    /* Projects Grid - Clean Cards */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .project-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(31, 97, 49, 0.15);
+    }
+
+    .project-img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      background: #f0f0f0;
+    }
+
+    .project-content {
+      padding: 25px;
+    }
+
+    .project-category {
+      font-size: 13px;
+      color: #1f6131;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .project-content h3 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .project-content p {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      padding: 5px 12px;
+      background: #f0f0f0;
+      border-radius: 20px;
+      font-size: 12px;
+      color: #666;
+    }
+
+    /* About Section - Side by Side */
+    .about-section {
+      padding: 80px 60px;
+      background: #f9f9f9;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      max-width: 1200px;
+      margin: 0 auto;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      font-size: 32px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      font-size: 16px;
+      color: #666;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+      padding-top: 40px;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-icon {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .stat-number {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1f6131;
+      margin-bottom: 5px;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .about-image {
+      position: relative;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 80px 60px;
+      background: #fff;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 32px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .contact-section p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .contact-email {
+      display: inline-block;
+      padding: 16px 40px;
+      background: #1f6131;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .contact-email:hover {
+      background: #164821;
+    }
+
+    .contact-info {
+      margin-top: 30px;
+      color: #666;
+      font-size: 15px;
+    }
+
+    .social-links {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .social-links a {
+      color: #666;
+      text-decoration: none;
+      font-size: 15px;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #1f6131;
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 60px;
+      background: #f9f9f9;
+      text-align: center;
+      color: #999;
+      font-size: 14px;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    @media (max-width: 968px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .stats {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      header, .hero, .section, .about-section, .contact-section, footer {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Pascal Rein</div>
+  </header>
+
+  <section class="hero">
+    <h1>Industrial Designer</h1>
+    <p>Design · Prototyping · 3D-Druck · Videoproduktion · Fotografie</p>
+    
+    <div class="hero-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </section>
+
+  <section id="work" class="section">
+    <div class="section-header">
+      <h2>Selected Work</h2>
+      <p>Eine Auswahl meiner Projekte im Bereich Industrial Design – von der Idee bis zur Umsetzung.</p>
+    </div>
+
+    <div class="projects-grid">
+      <!-- THANATOS -->
+      <div class="project-card">
+        <img src="images/thanatos1.jpg" alt="THANATOS" class="project-img" />
+        <div class="project-content">
+          <div class="project-category">3D Design</div>
+          <h3>THANATOS</h3>
+          <p>Eau de Parfum mit intensiver haptischer Erfahrung, inspiriert vom griechischen Gott des Todes.</p>
+          <div class="project-tags">
+            <span class="tag">3D Design</span>
+            <span class="tag">Typography</span>
+            <span class="tag">Sculpture</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ENSO -->
+      <div class="project-card">
+        <img src="images/enso1.jpg" alt="ENSO" class="project-img" />
+        <div class="project-content">
+          <div class="project-category">3D Design</div>
+          <h3>ENSO</h3>
+          <p>Kabellose In-Ear-Kopfhörer für Meditation, inspiriert vom Zen-Buddhismus.</p>
+          <div class="project-tags">
+            <span class="tag">3D Design</span>
+            <span class="tag">Minimalism</span>
+            <span class="tag">Concept</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- AQUA -->
+      <div class="project-card">
+        <img src="images/aqua3.jpg" alt="AQUA" class="project-img" />
+        <div class="project-content">
+          <div class="project-category">3D Design</div>
+          <h3>AQUA</h3>
+          <p>Smartwatch aus Platinum 925er mit Fitness-Tracking und elegantem Design.</p>
+          <div class="project-tags">
+            <span class="tag">3D Design</span>
+            <span class="tag">Abstract</span>
+            <span class="tag">Motion</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANDIA MADDOX -->
+      <div class="project-card">
+        <img src="images/pandia1.jpg" alt="PANDIA MADDOX" class="project-img" />
+        <div class="project-content">
+          <div class="project-category">3D Design</div>
+          <h3>PANDIA MADDOX</h3>
+          <p>Die Dialupe der Moderne für professionelle Fotobearbeitung.</p>
+          <div class="project-tags">
+            <span class="tag">Product Design</span>
+            <span class="tag">CAD</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- VITRA -->
+      <div class="project-card">
+        <img src="images/vitra1.jpg" alt="VITRA" class="project-img" />
+        <div class="project-content">
+          <div class="project-category">3D Design</div>
+          <h3>VITRA</h3>
+          <p>Bank "Les pieds dans l'eau" – inspiriert von der bretonischen Küste.</p>
+          <div class="project-tags">
+            <span class="tag">Furniture</span>
+            <span class="tag">Concept</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BRENNENSTUHL -->
+      <div class="project-card">
+        <img src="images/bren1.jpg" alt="Brennenstuhl" class="project-img" />
+        <div class="project-content">
+          <div class="project-category">3D Design</div>
+          <h3>BRENNENSTUHL</h3>
+          <p>Steckdosenleiste mit Ambient-Light für Gaming.</p>
+          <div class="project-tags">
+            <span class="tag">Product Design</span>
+            <span class="tag">Collaboration</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CAD -->
+      <div class="project-card">
+        <img src="images/cad4.jpg" alt="CAD" class="project-img" />
+        <div class="project-content">
+          <div class="project-category">3D Design</div>
+          <h3>CAD</h3>
+          <p>Technische Visualisierungen und Explosionszeichnungen.</p>
+          <div class="project-tags">
+            <span class="tag">CAD</span>
+            <span class="tag">Technical</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SKETCHES -->
+      <div class="project-card">
+        <img src="images/sketchcar1.jpg" alt="Sketches" class="project-img" />
+        <div class="project-content">
+          <div class="project-category">Design</div>
+          <h3>SKETCHES</h3>
+          <p>Von der ersten Ideenskizze zur ausgearbeiteten Visualisierung.</p>
+          <div class="project-tags">
+            <span class="tag">Sketching</span>
+            <span class="tag">Process</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D PRINT -->
+      <div class="project-card">
+        <img src="images/3dprint.jpg" alt="3D Print" class="project-img" />
+        <div class="project-content">
+          <div class="project-category">Prototyping</div>
+          <h3>3D-DRUCK</h3>
+          <p>Von der digitalen Datei zum physischen Prototyp.</p>
+          <div class="project-tags">
+            <span class="tag">3D Print</span>
+            <span class="tag">DFAM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>Ich bin freiberuflicher Industrial Designer mit Sitz in Pforzheim. Mein Fokus liegt darauf, Ideen greifbar, sichtbar und erlebbar zu machen.</p>
+        <p>Mein Hintergrund im Industrial Design, kombiniert mit praktischer Erfahrung in 3D-Druck, CAD-Konstruktion, Videoproduktion und Fotografie, ermöglicht es mir, Projekte ganzheitlich zu realisieren – von der ersten Skizze bis zum fertigen Prototyp.</p>
+        <p>Was mich antreibt, ist die Verbindung von Technik und Emotion. Ob physisches Produkt oder visuelles Storytelling – ich arbeite interdisziplinär, präzise und mit hohem Anspruch.</p>
+        
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-icon">💼</div>
+            <div class="stat-number">8+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat">
+            <div class="stat-icon">🎨</div>
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Projects</div>
+          </div>
+          <div class="stat">
+            <div class="stat-icon">🏆</div>
+            <div class="stat-number">4+</div>
+            <div class="stat-label">Awards</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-image">
+        <img src="images/portrait.jpg" alt="Pascal Rein" />
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2>Let's Work Together</h2>
+    <p>Hast du ein Projekt im Kopf? Ich freue mich auf deine Nachricht!</p>
+    
+    <a href="mailto:pascalrein@gmx.de" class="contact-email">pascalrein@gmx.de</a>
+    
+    <div class="contact-info">
+      <p>Liebeneckstr. 33 · 75175 Pforzheim</p>
+      <p>Tel: 01577-8286921</p>
+    </div>
+
+    <div class="social-links">
+      <a href="https://www.instagram.com/pascalrein.design" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/in/pascal-rein" target="_blank">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Pascal Rein. All rights reserved.</p>
+  </footer>
+</body>
+</html>
